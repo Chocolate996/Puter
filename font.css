@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Emoji;
+    src: local("Apple Color Emojiji"), local("Segoe UI Emoji"), local("Segoe UI Symbol"), local("Noto Color Emoji");
+    unicode-range: U+1F000-1F644, U+203C-3299;
+}
+
+.font-style, body {
+    font-family: system-ui, —apple-system, Segoe UI, Rototo, Emoji, Helvetica, Arial, sans-serif;
+}
+
+.font-serif {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.font-mono {
+    font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.fw-lighter {
+    font-weight: lighter;
+}
+
+.fs-w {
+    justify-self: flex-start;
+    color: #ffffff;
+}
+
+.fs-otitle-l {
+    font-size: 56px;
+}
+
+.fs-otitle-m {
+    font-size: 48px;
+}
+
+.fs-otitle-s {
+    font-size: 36px;
+}
+
+.fs-title-l {
+    font-size: 24px;
+}
+
+.fs-title-m {
+    font-size: 20px;
+}
+
+.fs-title-s {
+    font-size: 16px;
+}
+
+.fm-ot-s {
+    margin-bottom: 5px;
+}
+
+.fs-text-l {
+    font-size: 14px;
+}
+
+.fs-text-l-s {
+    text-shadow: #00000073 0.2vw 0.2vw 0.5vw
+}
+
+.fs-text-s {
+    font-size: 13px;
+}
+
+.fs-text-s-s {
+    text-shadow: #00000048 0.15vw 0.15vw 0.4vw;
+}
+
+.fs-s {
+    font-size: 12px;
+}
+
+.fs-s-s {
+    text-shadow: #00000048 0.1vw 0.1vw 0.3vw;
+}
+
+.fc-75 {
+    color: rgba(0, 0, 0, 0.5)
+}
+
+.fc-75-w {
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.fc-95-w {
+    color: rgba(255, 255, 255, 0.95)
+}
