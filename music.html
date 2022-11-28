@@ -3,22 +3,120 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Music</title>
+    <title>音乐</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="ui.css">
     <link rel="stylesheet" type="text/css" href="font.css">
+    <style>
+        .download-bg-style {
+            width: 100%;
+            padding: 150px 0 150px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .download-margin {
+            margin: 15px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+        .download-text {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+        }
+
+        .download-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px var(--shadow-1);
+            background-size: cover;
+            background-position: center;
+            transform: translateY(0px);
+        }
+
+        .download-img:hover {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px var(--shadow-1);
+            background-size: cover;
+            background-position: center;
+            transform: translateY(0px);
+        }
+
+        .download-box:hover {
+            transform: scale(102%);
+        }
+
+        .egg {
+            position: absolute;
+            background-image: url(https://i.328888.xyz/img/2022/11/26/y8xk.jpeg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            z-index: 1;
+            transition: 0.5s var(--default-bezier-start);
+        }
+
+        .egg:hover {
+            opacity: 0;
+        }
+
+        .music-color-0 {
+            background-image: linear-gradient(to right, #423429, #121315);
+        }
+
+        .music-color-1 {
+            background-image: linear-gradient(to right, #4E4F88, #474658);
+        }
+
+        .music-color-2 {
+            background-image: linear-gradient(to right, #4E572A, #363F3C);
+        }
+
+        .music-color-3 {
+            background-image: linear-gradient(to right, #5a5f64, #4B535E);
+        }
+
+        .music-color-4 {
+            background-image: linear-gradient(to right, #D0879A, #14091B);
+        }
+
+        .music-color-5 {
+            background-image: linear-gradient(to right, #D1E0E5, #4B5B62);
+        }
+
+        .music-color-6 {
+            background-image: linear-gradient(to right, #E3DED2, #9F9177);
+        }
+
+        .music-color-7 {
+            background-image: linear-gradient(to right, #7FB1BA, #5E8292);
+        }
+
+        .music-color-8 {
+            background-image: linear-gradient(to right, #c58099, #402A59);
+        }
+    </style>
 </head>
 
-<body style="background: #fff;">
+<body>
     <!--nav-->
     <div class="nav-hide-center">
         <div class="nav-hide">
             <div class="nav">
                 <div class="navbox">
                     <div class="nav-o" id="nav-o">
-                        <div class="navtitle navtitle-transition fs-title-m"><a href="index.html">下载音乐</a></div>
-                        <div class="navtext fs-title-s">
+                        <div class="navtitle navtitle-transition fs-title-m fw-Semibold f-lh-nav"><a
+                                href="index.html">下载音乐</a></div>
+                        <div class="navtext fs-title-s fw-Regular">
                             <div><a href="#" class="navtext-content-transition">音乐</a></div>
                             <div class="bluebox navtext-content-transition"><a href="download.html">下载</a></div>
                         </div>
@@ -31,18 +129,18 @@
     <!--nav end-->
     <!--img and titile-->
     <div class="img">
-        <div class="music-bg-style">
+        <div class="download-bg-style">
             <div class="grid">
                 <div class="download-box music-color-0 fc-95-w" style="grid-column: span 12">
-                    <div class="music-margin">
+                    <div class="download-margin">
                         <div class="out-w">
-                            <div class="music-img"
-                                style="background-image: url(https://s1.328888.xyz/2022/08/24/wuEBj.png);"></div>
+                            <div class="download-img"
+                                style="background-image: url(https://i.328888.xyz/img/2022/11/26/yHFw.jpeg);"></div>
                         </div>
                         <div class="right">
-                            <div class="music-text">
-                                <p class="fs-otitle-s fm-ot-s">Beethoven's 5 Secrets</p>
-                                <p class="fs-text-l fc-75-w">The Piano Guys</p>
+                            <div class="download-text">
+                                <p class="fs-otitle-s fm-ot-s fw-Semibold">Beethoven's 5 Secrets</p>
+                                <p class="fs-text-l fc-75-w fw-Regular">The Piano Guys</p>
                             </div>
                             <div class="bluebox"><a href="https://wwm.lanzouv.com/iMCwA0a583fc"
                                     class="fs-text-l">FLAC</a>
@@ -51,15 +149,15 @@
                     </div>
                 </div>
                 <div class="download-box music-color-1 fc-95-w" style="grid-column: span 12">
-                    <div class="music-margin">
+                    <div class="download-margin">
                         <div class="out-w">
-                            <div class="music-img"
-                                style="background-image: url(https://s1.328888.xyz/2022/08/24/wum0m.png);"></div>
+                            <div class="download-img"
+                                style="background-image: url(https://i.328888.xyz/img/2022/11/26/yrnp.jpeg);"></div>
                         </div>
                         <div class="right">
-                            <div class="music-text">
-                                <p class="fs-otitle-s fm-ot-s">A Sky Full of Stars</p>
-                                <p class="fs-text-l fc-75-w">The Piano Guys</p>
+                            <div class="download-text">
+                                <p class="fs-otitle-s fm-ot-s fw-Semibold">A Sky Full of Stars</p>
+                                <p class="fs-text-l fc-75-w fw-Regular">The Piano Guys</p>
                             </div>
                             <div class="bluebox"><a href="https://wwm.lanzouv.com/iputM0a582ne"
                                     class="fs-text-l">FLAC</a>
@@ -68,15 +166,15 @@
                     </div>
                 </div>
                 <div class="download-box music-color-2 fc-95-w" style="grid-column: span 12">
-                    <div class="music-margin">
+                    <div class="download-margin">
                         <div class="out-w">
-                            <div class="music-img"
-                                style="background-image: url(https://s1.328888.xyz/2022/08/24/w0jId.png);"></div>
+                            <div class="download-img"
+                                style="background-image: url(https://i.328888.xyz/img/2022/11/26/yjlx.jpeg);"></div>
                         </div>
                         <div class="right">
-                            <div class="music-text">
-                                <p class="fs-otitle-s fm-ot-s">Fight Song / Amazing Grace</p>
-                                <p class="fs-text-l fc-75-w">The Piano Guys</p>
+                            <div class="download-text">
+                                <p class="fs-otitle-s fm-ot-s fw-Semibold">Fight Song / Amazing Grace</p>
+                                <p class="fs-text-l fc-75-w fw-Regular">The Piano Guys</p>
                             </div>
                             <div class="bluebox"><a href="https://wwm.lanzouv.com/icLGo0a5846j"
                                     class="fs-text-l">FLAC</a>
@@ -84,19 +182,87 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="download-box music-color-3 fc-95-w" style="grid-column: span 12">
-                    <div class="music-margin">
+                <div class="download-box music-color-4 fc-95-w" style="grid-column: span 12">
+                    <div class="download-margin">
                         <div class="out-w">
-                            <div class="music-img"
-                                style="background-image: url(https://s1.328888.xyz/2022/08/24/wKjWh.png);"></div>
+                            <div class="download-img"
+                                style="background-image: url(https://i.328888.xyz/img/2022/11/26/y3cU.jpeg);"></div>
                         </div>
                         <div class="right">
-                            <div class="music-text">
-                                <p class="fs-otitle-s fm-ot-s">Dive Back In Time</p>
-                                <p class="fs-text-l fc-75-w">白鲨JAWS</p>
+                            <div class="download-text">
+                                <p class="fs-otitle-s fm-ot-s fw-Semibold">Cornfield Chase</p>
+                                <p class="fs-text-l fc-75-w fw-Regular">Hans Zimmer</p>
                             </div>
-                            <div class="bluebox"><a href="https://wwm.lanzouv.com/i0agz0a64qjg"
+                            <div class="bluebox"><a href="https://wwm.lanzouv.com/istpZ0agbyah"
+                                    class="fs-text-l">FLAC</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-box music-color-5 fc-95-w" style="grid-column: span 12">
+                    <div class="download-margin">
+                        <div class="out-w">
+                            <div class="download-img"
+                                style="background-image: url(https://i.328888.xyz/img/2022/11/26/yOQa.jpeg);"></div>
+                        </div>
+                        <div class="right">
+                            <div class="download-text">
+                                <p class="fs-otitle-s fm-ot-s fw-Semibold">No Time for Caution</p>
+                                <p class="fs-text-l fc-75-w fw-Regular">Hans Zimmer</p>
+                            </div>
+                            <div class="bluebox"><a href="https://wwm.lanzouv.com/iBMaq0agby4b"
+                                    class="fs-text-l">FLAC</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-box music-color-6 fc-95-w" style="grid-column: span 12">
+                    <div class="download-margin">
+                        <div class="egg out-w"></div>
+                        <div class="out-w">
+                            <div class="download-img"
+                                style="background-image: url(https://i.328888.xyz/img/2022/11/26/yBF5.png);"></div>
+                        </div>
+                        <div class="right">
+                            <div class="download-text">
+                                <p class="fs-otitle-s fm-ot-s fw-Semibold">冬の花</p>
+                                <p class="fs-text-l fc-75-w fw-Regular">宮本浩次</p>
+                            </div>
+                            <div class="bluebox"><a href="https://wwm.lanzouv.com/iTFmF0ai26kh"
+                                    class="fs-text-l">MP3</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-box music-color-7 fc-95-w" style="grid-column: span 12">
+                    <div class="download-margin">
+                        <div class="out-w">
+                            <div class="download-img"
+                                style="background-image: url(https://i.328888.xyz/img/2022/11/26/yILL.jpeg);"></div>
+                        </div>
+                        <div class="right">
+                            <div class="download-text">
+                                <p class="fs-otitle-s fm-ot-s fw-Semibold">最伟大的作品</p>
+                                <p class="fs-text-l fc-75-w fw-Regular">周杰伦</p>
+                            </div>
+                            <div class="bluebox"><a href="https://wwm.lanzouv.com/iLXJC0cq6sxg"
+                                    class="fs-text-l">FLAC</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="download-box music-color-8 fc-95-w" style="grid-column: span 12">
+                    <div class="download-margin">
+                        <div class="out-w">
+                            <div class="download-img"
+                                style="background-image: url(https://i.328888.xyz/img/2022/11/26/yRov.jpeg);"></div>
+                        </div>
+                        <div class="right">
+                            <div class="download-text">
+                                <p class="fs-otitle-s fm-ot-s fw-Semibold">Stolas Sings</p>
+                                <p class="fs-text-l fc-75-w fw-Regular">Dolphin Smiling</p>
+                            </div>
+                            <div class="bluebox"><a href="https://wwm.lanzouv.com/imtFG0gxn9ah"
                                     class="fs-text-l">FLAC</a>
                             </div>
                         </div>

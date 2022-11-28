@@ -1,17 +1,21 @@
 .img {
-    filter: blur(5px);
+    filter: blur(3px);
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 100vh;
-    transition: 0.7s cubic-bezier(.5, 0, .25, 1);
+    min-height: 100vh;
+    transition: 0.7s var(--default-bezier-start);
 }
 
 .img:hover {
     filter: blur(0px);
     background-size: cover;
     background-position: center;
-    transition: 0.3s cubic-bezier(.5, 0, .25, 1);
+    transition: 0.3s var(--default-bezier-start);
+}
+
+.img-default {
+    background-image: url(https://www.yangshangzhen.com/bing/wallpaper);
 }
 
 .nav-hide {
@@ -22,35 +26,43 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.6s cubic-bezier(.16,.53,.21,1);
+    flex-direction: column;
+    transition: 0.6s var(--default-bezier-nav-end);
+}
+
+.nav-hide:hover>.nav>.navbox>.nav-o {
+    opacity: 1;
+    filter: blur(0px);
+    transition: 0.3s var(--default-bezier-start);
 }
 
 .nav-hide:hover {
     top: 0;
-    transition: 0.4s cubic-bezier(.16,.53,.21,1);
+    transition: 0.5s var(--default-bezier-nav-start);
 
 }
 
 .nav {
     -webkit-backdrop-filter: blur(20px)saturate(180%);
     backdrop-filter: blur(20px)saturate(180%);
-    background-color: rgba(255, 255, 255, 0.72);
+    background-color: var(--box-white-1);
     width: 50%;
     min-width: 300px;
     border-radius: 20px;
     margin-top: 5px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px;
+    box-shadow: var(--shadow-3) 0px 0px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.5s cubic-bezier(0.28, 0.11, 0.32, 1);
+    transition: all 0.5s var(--default-bezier-apple-nav);
 }
 
 
 .navline {
+    background-color: var(--box-black-4);
     position: absolute;
+    pointer-events: none;
     bottom: 7.5px;
-    background-color: rgba(0, 0, 0, 0.2);
     width: 10%;
     height: 5px;
     border-radius: 100px;
@@ -59,6 +71,7 @@
 .navbox {
     margin: 0 15px;
     width: 100%;
+    z-index: 1;
 }
 
 .navtext {
@@ -75,84 +88,332 @@
     justify-content: space-between;
     align-items: center;
     opacity: 0;
-    transition: 0.3s cubic-bezier(.5, 0, .25, 1);
+    filter: blur(5px);
+    transition: 0.3s var(--default-bezier-end);
 }
 
-.nav-o:hover {
-    opacity: 1;
-    transition: 0.2s cubic-bezier(.5, 0, .25, 1);
+.message-a {
+    border-radius: 20px;
+    transition: all 0.5s var(--default-bezier-end);
+    z-index: -1;
+}
+
+.message {
+    -webkit-backdrop-filter: blur(20px)saturate(180%);
+    backdrop-filter: blur(20px)saturate(180%);
+    background-color: var(--box-white-1);
+    border-radius: 20px;
+    margin-top: 5px;
+    box-shadow: var(--shadow-3) 0px 0px 10px;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    animation-timing-function: var(--default-bezier-start);
+    animation-name: message;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+    transition: all 0.3s var(--default-bezier-end);
+}
+
+.message-a:hover {
+    transition: all 0.3s var(--default-bezier-start);
+}
+
+.message-a:active {
+    box-shadow: var(--shadow-1) 0px 0px 15px;
+    transition: all 0.2s var(--default-bezier-start);
+}
+
+.message-a:hover>.message {
+    box-shadow: var(--shadow-1) 0px 0px 15px;
+    transition: all 0.4s var(--default-bezier-start);
+}
+
+.message-a:active>.message {
+    box-shadow: var(--shadow-1) 0px 0px 15px;
+    transition: all 0.3s var(--default-bezier-start);
+}
+
+.message-text {
+    animation-name: message-text;
+    animation-timing-function: var(--default-bezier-start);
+    animation-name: message-text;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-delay: 2s;
+}
+
+@keyframes message {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0.25;
+        width: 20px;
+    }
+
+    10% {
+        transform: translateY(0px);
+        width: 200px;
+        opacity: 1;
+        padding: 5px 10px;
+    }
+
+    20% {}
+
+    30% {}
+
+    40% {}
+
+    40% {}
+
+    60% {}
+
+    70% {}
+
+    80% {}
+
+    90% {
+        width: 200px;
+        opacity: 1;
+        padding: 5px 10px;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 0;
+        width: 20px;
+        transform: translateY(-50px);
+    }
+}
+
+@keyframes message-text {
+    0% {
+        filter: blur(5px);
+        color: var(--opacity);
+    }
+
+    10% {
+        filter: blur(0px);
+        color: unset;
+    }
+
+    20% {}
+
+    30% {}
+
+    40% {}
+
+    40% {}
+
+    60% {}
+
+    70% {}
+
+    80% {}
+
+    90% {
+        filter: blur(0px);
+        color: unset;
+    }
+
+    100% {
+        filter: blur(5px);
+        color: var(--opacity);
+    }
+}
+
+.bluebox:hover, .more:hover, .download-url:hover, .download-url-out:hover, .download-box:hover, .message-a:hover {
+    transform: scale(105%);
+}
+
+.bluebox:active, .more:active, .download-url:active, .download-url-out:active {
+    transform: scale(95%);
+    filter: blur(2px);
+    opacity: 75%;
+}
+
+.message-a:active {
+    transform: scale(95%);
+    background-color: transparent;
 }
 
 .bluebox {
-    background-color: rgb(0, 140, 255);
+    background-color: var(--default-color);
     border-radius: 5px;
-    color: #fff;
+    color: var(--text-white);
     min-width: 20px;
     padding: 2px 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.4s ease-in-out;
+    font-weight: 400;
+    transition: all 0.5s var(--default-bezier-end);
 }
 
 .bluebox:hover {
-    color: #fff;
-    background-color: rgb(23, 151, 255);
-    box-shadow: 0 0 5px rgba(0, 140, 255, 0.25);
-    transition: all 0.2s ease-in-out;
+    background-color: var(--default-color-focus);
+    box-shadow: 0 0 5px var(--default-color-shadow);
+    transition: all 0.4s var(--default-bezier-start);
+}
+
+.bluebox:active {
+    background-color: var(--default-color-focus);
+    box-shadow: 0 0 5px var(--default-color-shadow);
+    transition: all 0.3s var(--default-bezier-start);
+}
+
+.bluebox-no {
+    background-color: var(--default-color);
+    opacity: 0.5;
+    border-radius: 5px;
+    color: var(--text-white);
+    min-width: 20px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    transition: all 0.5s var(--default-bezier-end);
 }
 
 .whitebox {
     -webkit-backdrop-filter: blur(20px)saturate(180%);
     backdrop-filter: blur(20px)saturate(180%);
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--box-white-4);
+    box-shadow: 0px 5px 20px var(--shadow-3);
     max-width: 641.31px;
     width: 75%;
-    padding: 25px 25px 57px 25px;
+    padding: 25px 25px 65px 25px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    transition: 0.3s cubic-bezier(.5, 0, .25, 1);
+    transition: 0.3s var(--default-bezier-end);
 }
 
 .whitebox:hover {
-    background-color: rgba(255, 255, 255, 0.30);
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-    transition: 0.3s cubic-bezier(.5, 0, .25, 1);
+    background-color: var(--box-white-3);
+    box-shadow: 0px 7px 15px var(--shadow-1);
+    transition: 0.3s var(--default-bezier-start);
+}
+
+.more-list {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+
+.more {
+    -webkit-backdrop-filter: blur(20px)saturate(180%);
+    backdrop-filter: blur(20px)saturate(180%);
+    border-radius: 100%;
+    margin-top: 25px;
+    background-color: var(--box-white-4);
+    box-shadow: 0px 5px 20px var(--shadow-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    transition: 0.3s var(--default-bezier-end);
+}
+
+.more:hover {
+    background-color: var(--box-white-3);
+    box-shadow: 0px 10px 15px var(--shadow-1);
+    transition: 0.3s var(--default-bezier-start);
+}
+
+.more:active {
+    background-color: var(--box-white-5);
+    box-shadow: 0px 10px 15px var(--shadow-1);
+    transition: 0.3s var(--default-bezier-start);
+}
+
+.download-url-box {
+    position: absolute;
+    margin: 20px;
+    bottom: 0;
+    right: 0;
+    display: flex;
+}
+
+.download-url-box-out {
+    -webkit-backdrop-filter: blur(20px)saturate(180%);
+    backdrop-filter: blur(20px)saturate(180%);
+    background-color: var(--box-white-4);
+    box-shadow: 0px 5px 15px var(--shadow-3);
+    border-radius: 100px;
+    padding: 10px;
+    width: 35%;
+    max-width: 498.09px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s var(--default-bezier-start);
+}
+
+.download-url-box-out:hover {
+    background-color: var(--box-white-3);
+    box-shadow: 0px 10px 10px var(--shadow-1);
+    transition: 0.3s var(--default-bezier-start);
+}
+
+.download-url-out {
+    padding: 6px 10px;
+    background-color: var(--box-white-4);
+    box-shadow: 0px 5px 10px var(--shadow-3);
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s var(--default-bezier-start);
+}
+
+.download-url-out:hover {
+    background-color: var(--box-white-3);
+    box-shadow: 0px 5px 5px var(--shadow-1);
+    transition: 0.5s var(--default-bezier-start);
+}
+
+.download-url-out:active {
+    background-color: var(--box-white-5);
+    box-shadow: 0px 5px 5px var(--shadow-1);
+    transition: 0.3s var(--default-bezier-start);
 }
 
 .download-url {
-    position: absolute;
-    margin: 20px;
+    margin-left: 25px;
     padding: 6px 10px;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+    background-color: var(--box-white-4);
+    box-shadow: 0px 5px 15px var(--shadow-3);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    transition: 0.5s cubic-bezier(.5, 0, .25, 1);
+    transition: 0.5s var(--default-bezier-start);
 }
 
 .download-url:hover {
-    transform: scale(95%);
-    background-color: rgba(255, 255, 255, 0.25);
-    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
-    transition: 0.5s cubic-bezier(.5, 0, .25, 1);
+    background-color: var(--box-white-4);
+    box-shadow: 0px 5px 10px var(--shadow-1);
+    transition: 0.5s var(--default-bezier-start);
+}
+
+.download-url:active {
+    background-color: var(--box-white-5);
+    box-shadow: 0px 5px 10px var(--shadow-1);
+    transition: 0.2s var(--default-bezier-start);
 }
 
 .download-box {
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.10);
+    background-color: var(--box-white-2);
+    box-shadow: 0px 5px 15px var(--shadow-4);
     transition: 0.5s cubic-bezier(.39, .3, .14, 1);
 }
 
 .download-box:hover {
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15), 0px 0px 10px rgba(0, 0, 0, 0.05);
-    transform: scale(95%);
+    box-shadow: 0px 10px 10px var(--shadow-3), 0px 0px 10px var(--shadow-5);
     transition: 0.3s cubic-bezier(.39, .3, .14, 1);
 }
 
@@ -166,19 +427,13 @@
     align-self: center;
 }
 
-.music-margin {
-    margin: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .download-img {
     width: 10px;
     height: 10px;
     background-size: cover;
     background-position: center;
     border-radius: 15px;
-    transition: 0.7s cubic-bezier(.48, 1.23, .25, 1);
+    transition: 0.7s var(--default-bezier-ios-end);
 }
 
 .download-img:hover {
@@ -187,62 +442,31 @@
     margin-bottom: -95px;
     width: 85%;
     height: 12vw;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
-    transition: 1.2s cubic-bezier(.25, 1, .25, 1);
+    box-shadow: 0px 5px 10px var(--shadow-5);
+    transition: 1.2s var(--default-bezier-ios-start);
 }
 
 .download-img-color {
     border-radius: 15px;
-    background: rgba(23, 151, 255, 1);
+    border: 0px solid var(--default-color);
+    background: var(--default-color);
     width: 100%;
     height: 100%;
-    transition: 0.3s cubic-bezier(.5, 0, .25, 1);
+    transition: 0.3s var(--default-bezier-start);
 }
 
 .download-img-color:hover {
     box-sizing: border-box;
-    border: 5px solid rgba(23, 151, 255, 1);
-    background: rgba(23, 151, 255, 0);
+    border: 5px solid var(--default-color);
+    background-color: var(--default-color-opacity);
 }
 
 .download-text {
     margin-bottom: 10px;
 }
 
-.music-text {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-}
-
 .right {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-}
-
-.music-img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-    background-size: cover;
-    background-position: center;
-}
-
-.music-color-0 {
-    background-image: linear-gradient(to right, #423429, #121315);
-}
-
-.music-color-1 {
-    background-image: linear-gradient(to right, #4E4F88, #474658);
-}
-
-.music-color-2 {
-    background-image: linear-gradient(to right, #4E572A, #363F3C);
-}
-
-.music-color-3 {
-    background-image: linear-gradient(to right, #63686C, #4B535E);
 }

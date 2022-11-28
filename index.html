@@ -3,21 +3,22 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Index</title>
+    <title>主页</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="ui.css">
     <link rel="stylesheet" type="text/css" href="font.css">
 </head>
 
-<body>
+<body class="body-bg">
     <!--nav-->
     <div class="nav-hide-center">
         <div class="nav-hide">
             <div class="nav">
                 <div class="navbox">
                     <div class="nav-o" id="nav-o">
-                        <div class="navtitle navtitle-transition fs-title-m"><a href="#">下载&nbsp;PPT</a></div>
-                        <div class="navtext fs-title-s">
+                        <div class="navtitle navtitle-transition fs-title-m fw-Semibold f-lh-nav"><a href="#">主页</a>
+                        </div>
+                        <div class="navtext fs-title-s fw-Regular">
                             <div><a href="music.html" class="navtext-content-transition">音乐</a></div>
                             <div class="bluebox navtext-content-transition"><a href="download.html">下载</a></div>
                         </div>
@@ -25,19 +26,40 @@
                 </div>
                 <div class="navline"></div>
             </div>
+            <a class="message-a">
+                <div class="message fs-title-s fw-Semibold" onclick="message1()" id="message_id">
+                    <p class="message-text">这里是顶栏👆，get it？</p>
+                </div>
+            </a>
         </div>
     </div>
-    <div class="img" style="background-image: url(https://www.yangshangzhen.com/bing/wallpaper);">
+    <div class="img img-default" id="bg_img">
+        <div class="more-list">
+            <a href="code.html">
+                <div class="more"><svg t="1661677151717" class="icon" viewBox="0 0 1027 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="4303" width="25" height="25" style="opacity: 0.5;">
+                        <path
+                            d="M321.828571 226.742857c-14.628571-14.628571-36.571429-14.628571-51.2 0L7.314286 482.742857c-14.628571 14.628571-14.628571 36.571429 0 51.2l256 256c14.628571 14.628571 36.571429 14.628571 51.2 0 14.628571-14.628571 14.628571-36.571429 0-51.2L87.771429 512l234.057142-234.057143c7.314286-14.628571 7.314286-36.571429 0-51.2z m263.314286 0c-14.628571 0-36.571429 7.314286-43.885714 29.257143l-131.657143 497.371429c-7.314286 21.942857 7.314286 36.571429 29.257143 43.885714s36.571429-7.314286 43.885714-29.257143l131.657143-497.371429c7.314286-14.628571-7.314286-36.571429-29.257143-43.885714z m431.542857 256l-256-256c-14.628571-14.628571-36.571429-14.628571-51.2 0-14.628571 14.628571-14.628571 36.571429 0 51.2L936.228571 512l-234.057142 234.057143c-14.628571 14.628571-14.628571 36.571429 0 51.2 14.628571 14.628571 36.571429 14.628571 51.2 0l256-256c14.628571-14.628571 14.628571-43.885714 7.314285-58.514286z"
+                            fill="" p-id="4304"></path>
+                    </svg>
+                </div>
+            </a>
+        </div>
         <div class="bg-style">
             <div class="whitebox">
-                <p class="fs-otitle-m fw-lighter">这里是飘特的 PPT&nbsp;下载中心</p>
-                <p class="fs-title-l fw-lighter">Slides Download Center</p>
-                <div class="download-url"><a href="download.html" class="fs-title-s">前往下载</a></div>
+                <p class="fs-otitle-m fw-Light">这里是飘特的 PPT&nbsp;下载中心</p>
+                <p class="fs-title-l fw-Light">Slides Download Center</p>
+                <div class="download-url-box">
+                    <a href="download.html" class="fs-title-s fw-Semibold">
+                        <div class="download-url">前往下载</div>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
     <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="bgstyle.js"></script>
 </body>
 
 </html>

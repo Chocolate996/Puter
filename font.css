@@ -16,13 +16,33 @@
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.fw-lighter {
-    font-weight: lighter;
+.f-lh-nav {
+    line-height: 0;
+}
+
+.fw-Ultralight {
+    font-weight: 100;
+}
+
+.fw-Light {
+    font-weight: 300;
+}
+
+.fw-Regular {
+    font-weight: 400;
+}
+
+.fw-Semibold {
+    font-weight: 600;
+}
+
+.fw-Bold {
+    font-weight: 900;
 }
 
 .fs-w {
     justify-self: flex-start;
-    color: #ffffff;
+    color: var(--text-white);
 }
 
 .fs-otitle-l {
@@ -47,10 +67,6 @@
 
 .fs-title-s {
     font-size: 16px;
-}
-
-.fm-ot-s {
-    margin-bottom: 5px;
 }
 
 .fs-text-l {
@@ -78,13 +94,13 @@
 }
 
 .fc-75 {
-    color: rgba(0, 0, 0, 0.5)
+    color: var(--text-black-2);
 }
 
 .fc-75-w {
-    color: rgba(255, 255, 255, 0.5)
+    color: var(--text-white-2);
 }
 
 .fc-95-w {
-    color: rgba(255, 255, 255, 0.95)
+    color: var(--text-white);
 }

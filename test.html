@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ui.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: unset;
+        }
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 100px 0;
+        }
+
+        .box {
+            background: #000;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            font-size: 25px;
+            transition: 1.5s var(--default-bezier-start);
+        }
+
+        .box:hover {
+            width: 400px;
+            height: 400px;
+            font-size: 200px;
+            color: #06EB00;
+        }
+
+        .text {
+            backdrop-filter: blur(10px);
+            color: rgba(255, 255, 255, 0.473);
+            background-clip: text;
+        }
+
+        h1,
+        p {
+            margin: 0;
+            word-wrap: break-word;
+        }
+
+        .imgbox {
+            margin-top: 100px;
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            background-image: url(https://www.yangshangzhen.com/bing/wallpaper);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            box-shadow: var(--shadow-3) 0px 0px 10px;
+        }
+
+        .imgbox-content {
+            width: 200px;
+            height: 20px;
+            border-radius: 10px;
+            -webkit-backdrop-filter: blur(20px)saturate(180%);
+            backdrop-filter: blur(20px)saturate(180%);
+            background-color: var(--box-white-2);
+            box-shadow: var(--shadow-3) 0px 0px 10px;
+            display: flex;
+            flex-direction: column;
+            transform: scale(75%);
+            overflow: hidden;
+            transition: 0.8s var(--default-bezier-ios-end);
+        }
+
+        .imgbox-content:hover {
+            transform: scale(100%);
+            width: 200px;
+            height: 110px;
+            transition: 1s var(--default-bezier-ios-start);
+        }
+
+        .imgbox-text {
+            margin: 5px 10px;
+            opacity: 0;
+            filter: blur(5px);
+            transition: all 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
+        }
+
+        .imgbox-text:hover {
+            filter: blur(0px);
+            opacity: 1;
+        }
+
+        .box-bg {
+            background: #000;
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border-radius: 100px;
+            margin-bottom: 100px;
+        }
+
+        .box-bg-content {
+            background-color: #fff;
+            padding: 5px 10px;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="1234">TEST</p>
+    <div class="flex">
+        <div class="box-bg">
+            <a href="">
+                <div onclick="setBg1()" class="box-bg-content">女孩</div>
+            </a>
+            <a href="">
+                <div onclick="setBg2()" class="box-bg-content">风景</div>
+            </a>
+            <a href="">
+                <div onclick="setBg3()" class="box-bg-content">汽车</div>
+            </a>
+            <a href="">
+                <div onclick="setBg4()" class="box-bg-content">运动</div>
+            </a>
+            <a href="">
+                <div onclick="setBg5()" class="box-bg-content">动物</div>
+            </a>
+        </div>
+        <div class="box">
+            <span class="text">JUST&nbsp;A "TEST"</span>
+        </div>
+        <div class="box">
+            <span><mark>JUST&nbsp;A "TEST"</mark></span>
+        </div>
+        <div class="box">
+            <span>JUST&nbsp;A "TEST"</span>
+        </div>
+        <div class="imgbox" id="bg_img">
+            <div class="imgbox-content">
+                <div class="imgbox-text">
+                    <h1>The Box</h1>
+                    <p>The "div" HTML element is the generic container for flow content.</p>
+                </div>
+            </div>
+        </div>
+        <a onclick="setCookie()" href="">
+            <div class="box">
+                <span>主页壁纸<br>Unsplash</span>
+            </div>
+        </a>
+        <a onclick="delCookie()" href="">
+            <div class="box">
+                <span>主页壁纸<br>Bing</span>
+            </div>
+        </a>
+        <div class="download-url">按钮</div>
+    </div>
+
+</body>
+<script type="text/javascript" src="javascript.js"></script>
+<script type="text/javascript" src="bgstyle.js"></script>
+
+</html>

@@ -9,27 +9,34 @@ a {
 }
 
 body {
-    background-color: rgb(0, 0, 0);
     color: #1d1d1f;
     min-width: 800px;
 }
 
+.body-bg {
+    background-color: var(--box-black);
+}
+
+.body-bg-white {
+    background-color: var(--default-color-body);
+}
+
 .navtitle-transition {
-    transition: 0.6s cubic-bezier(.5, 0, .5, 1);
+    transition: 0.6s var(--default-bezier-end);
 }
 
 .navtitle-transition:hover {
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-    transition: 0.4s cubic-bezier(.5, 0, .25, 1);
+    text-shadow: 0px 2px 5px var(--shadow-3);
+    transition: 0.4s var(--default-bezier-start);
 }
 
 .navtext-content-transition {
-    transition: 0.5s cubic-bezier(.5, 0, .5, 1);
+    transition: 0.5s var(--default-bezier-end);
 }
 
 .navtext-content-transition:hover {
-    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
-    transition: 0.4s cubic-bezier(.5, 0, .25, 1);
+    text-shadow: 0px 2px 5px var(--shadow-3);
+    transition: 0.4s var(--default-bezier-start);
 }
 
 .bg-style {
@@ -44,21 +51,12 @@ body {
 
 .download-bg-style {
     width: 100%;
-    padding-top: 150px;
+    padding: 150px 0 150px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.music-bg-style {
-    width: 100%;
-    padding-top: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .grid {
@@ -76,4 +74,75 @@ body {
 .url {
     width: 100%;
     height: 100%;
+}
+
+.code-lxh {
+    width: 100%;
+}
+
+mark {
+    background-color: transparent;
+    color: inherit;
+    background-image: linear-gradient(var(--default-color), var(--default-color));
+    background-repeat: no-repeat;
+    background-size: 0% 38%;
+    background-position: 0 100%;
+}
+
+mark.animate {
+    animation: 2s highlight var(--default-bezier-start) forwards;
+}
+
+@keyframes highlight {
+    to {
+        background-size: 100% 38%;
+    }
+}
+
+:root {
+    --default-color-body: #ffffff;
+    --default-color: rgb(0, 140, 255);
+    --default-color-opacity: rgba(0, 140, 255, 0);
+    --default-color-focus: rgb(23, 151, 255);
+    --default-color-shadow: rgba(0, 140, 255, 0.25);
+
+    --opacity: transparent;
+
+    --text-white: rgba(255, 255, 255, 0.95);
+    --text-white-1: rgba(255, 255, 255, 0.75);
+    --text-white-2: rgba(255, 255, 255, 0.50);
+    --text-white-3: rgba(255, 255, 255, 0.25);
+    --text-black: rgba(0, 0, 0, 0.90);
+    --text-black-1: rgba(0, 0, 0, 0.80);
+    --text-black-2: rgba(0, 0, 0, 0.50);
+    --text-black-3: rgba(0, 0, 0, 0.25);
+
+    --box-white: rgba(255, 255, 255, 1);
+    --box-white-1: rgba(255, 255, 255, 0.75);
+    --box-white-2: rgba(255, 255, 255, 0.50);
+    --box-white-3: rgba(255, 255, 255, 0.30);
+    --box-white-4: rgba(255, 255, 255, 0.25);
+    --box-white-5: rgba(255, 255, 255, 0.15);
+    --box-white-6: rgba(255, 255, 255, 0.10);
+    --box-black: rgba(0, 0, 0, 1);
+    --box-black-1: rgba(0, 0, 0, 0.75);
+    --box-black-2: rgba(0, 0, 0, 0.50);
+    --box-black-3: rgba(0, 0, 0, 0.25);
+    --box-black-4: rgba(0, 0, 0, 0.15);
+    --box-black-5: rgba(0, 0, 0, 0.10);
+
+    --shadow-1: rgba(0, 0, 0, 0.25);
+    --shadow-2: rgba(0, 0, 0, 0.20);
+    --shadow-3: rgba(0, 0, 0, 0.15);
+    --shadow-4: rgba(0, 0, 0, 0.10);
+    --shadow-5: rgba(0, 0, 0, 0.05);
+
+    --default-bezier-color: cubic-bezier(.6, 0, .5, 1);
+    --default-bezier-start: cubic-bezier(.5, 0, .25, 1);
+    --default-bezier-end: cubic-bezier(.5, 0, .5, 1);
+    --default-bezier-nav-start: cubic-bezier(.25, .1, 0, 1);
+    --default-bezier-nav-end: cubic-bezier(.5, .25, .4, 1);
+    --default-bezier-ios-start: cubic-bezier(.25, 1, .25, 1);
+    --default-bezier-ios-end: cubic-bezier(.48, 1.23, .25, 1);
+    --default-bezier-apple-nav: cubic-bezier(0.28, 0.11, 0.32, 1);
 }

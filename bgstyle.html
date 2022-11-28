@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>更改主页背景</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ui.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <style>
+        .whitebox {
+            padding: 25px 25px 25px 25px;
+        }
+    </style>
+</head>
+
+<body class="body-bg">
+    <!--nav-->
+    <div class="nav-hide-center">
+        <div class="nav-hide">
+            <div class="nav">
+                <div class="navbox">
+                    <div class="nav-o" id="nav-o">
+                        <div class="navtitle navtitle-transition fs-title-m fw-Semibold f-lh-nav"><a
+                                href="index.html">更改主页背景</a>
+                        </div>
+                        <div class="navtext fs-title-s fw-Regular">
+                            <div><a href="music.html" class="navtext-content-transition">音乐</a></div>
+                            <div class="bluebox navtext-content-transition"><a href="download.html">下载</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navline"></div>
+            </div>
+        </div>
+    </div>
+    <div class="img img-default" id="bg_img">
+        <div class="bg-style">
+            <div class="download-url-box-out">
+                <a onclick="delCookie()" href="" class="fs-text-s fw-Semibold">
+                    <div class="download-url-out" id="outbg3">Bing 每日壁纸</div>
+                </a>
+                <a href="test.html" class="fs-text-s fw-Semibold">
+                    <div class="download-url-out" id="outbg2">特定的 Unsplash 随机壁纸</div>
+                </a>
+
+                <a onclick="setCookie()" href="" class="fs-text-s fw-Semibold">
+                    <div class="download-url-out" id="outbg1">Unsplash 随机壁纸</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="bgstyle.js"></script>
+</body>
+
+</html>
