@@ -25,11 +25,6 @@ function setBg4() {
 function setBg5() {
     document.cookie = "bg=Unsplash_animal; expires=Thu, 18 Dec 2043 12:00:00 GMT";
 }
-//--------------------------------------------------------------------
-
-function message1() {
-    document.cookie = "message=no; expires=Thu, 18 Dec 2043 12:00:00 GMT";
-}
 
 function getCookie(name) {
     if (document.cookie.length > 0) {
@@ -42,17 +37,6 @@ function getCookie(name) {
         }
     }
     return "";
-}
-
-var message = getCookie('message');
-
-if (message == "no") {
-    var bgStyle = document.getElementById("message_id")
-    bgStyle.style.animationName = ("none")
-    bgStyle.style.opacity = ("0")
-}
-else {
-    console.log("yes")
 }
 
 var get = getCookie('bg');
@@ -111,5 +95,5 @@ else if (nowbg == "Bing") {
     document.getElementById("outbg3").style.backgroundColor = ("rgba(255, 255, 255, 0.50)")
     console.log("3")
 }
-else { console.log("sb") }
+else { console.log("impossible") }
 

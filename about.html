@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>关于</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="ui.css">
+    <link rel="stylesheet" type="text/css" href="font.css">
+    <style>
+        .title-text-animation {
+            position: relative;
+            top: .8rem;
+            opacity: 0;
+            filter: blur(5px);
+            animation: 0.6s swift-up cubic-bezier(.5, 0, 0, 1) forwards, 0.6s fade-in cubic-bezier(.5, 0, 0, 1) forwards;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+                filter: blur(0px);
+            }
+        }
+
+        .title-animation {
+            display: inline-block;
+            overflow: hidden;
+            position: relative;
+            top: .8rem;
+            animation: 0.7s swift-up cubic-bezier(.5, 0, 0, 1) forwards;
+        }
+
+        .title-animation-text {
+            font-style: normal;
+            position: relative;
+            top: 3.5rem;
+            opacity: 0;
+            filter: blur(10px);
+            animation: 0.6s swift-up cubic-bezier(.5, 0, 0, 1) forwards;
+        }
+
+        @keyframes swift-up {
+            to {
+                top: 0rem;
+                opacity: 1;
+                filter: blur(0px);
+            }
+        }
+
+        span:nth-of-type(1) i {
+            animation-delay: 0s;
+        }
+
+        span:nth-of-type(2) i {
+            animation-delay: .1s;
+        }
+
+        span:nth-of-type(3) i {
+            animation-delay: .2s;
+        }
+
+        span:nth-of-type(4) i {
+            animation-delay: .3s;
+        }
+
+        span:nth-of-type(5) i {
+            animation-delay: .4s;
+        }
+
+        span:nth-of-type(6) i {
+            animation-delay: .5s;
+        }
+
+        span:nth-of-type(1) {
+            animation-delay: 0s;
+        }
+
+        span:nth-of-type(2) {
+            animation-delay: .1s;
+        }
+
+        span:nth-of-type(3) {
+            animation-delay: .2s;
+        }
+
+        span:nth-of-type(4) {
+            animation-delay: .3s;
+        }
+
+        span:nth-of-type(5) {
+            animation-delay: .4s;
+        }
+
+        span:nth-of-type(6) {
+            animation-delay: .5s;
+        }
+    </style>
+</head>
+
+<body class="body-bg">
+    <!--nav-->
+    <div class="nav-hide-center">
+        <div class="nav-hide">
+            <div class="nav">
+                <div class="navbox">
+                    <div class="nav-o" id="nav-o">
+                        <div class="navtitle navtitle-transition fs-title-m fw-Semibold f-lh-nav"><a
+                                href="index.html">关于我们</a>
+                        </div>
+                        <div class="navtext fs-title-s fw-Regular">
+                            <div><a href="music.html" class="navtext-content-transition">音乐</a></div>
+                            <div class="bluebox navtext-content-transition"><a href="download.html">下载</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navline"></div>
+            </div>
+            <a class="message-a">
+                <div class="message fs-title-s fw-Semibold" onclick="message1()">
+                    <p class="message-text">All web pages are made by iThink.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="img img-default" id="bg_img">
+        <div class="bg-style">
+            <div class="whitebox">
+                <p class="fs-otitle-m fw-Light">
+                    <span class="title-animation"><i class="title-animation-text">About</i></span>
+                    <span class="title-animation"><i class="title-animation-text">Puter</i></span>
+                    <span class="title-animation"><i class="title-animation-text">and</i></span>
+                    <span class="title-animation"><i class="title-animation-text">us</i></span><span
+                        class="title-animation"><i class="title-animation-text">.</i></span>
+                </p>
+                <p class="fs-title-l fw-Light title-text-animation">A minimalist and perfectionist who makes videos with
+                    an artistic mindset.We have four main members. Below are their bilibili accounts. iThink made
+                    the webpage for us.</p>
+                <div class="download-url-box">
+                    <a href="https://space.bilibili.com/2025333637" class="fs-title-s fw-Semibold">
+                        <div class="download-url">命令</div>
+                    </a>
+                    <a href="https://space.bilibili.com/487317531" class="fs-title-s fw-Semibold">
+                        <div class="download-url">笋饺</div>
+                    </a>
+                    <a href="https://space.bilibili.com/456487549" class="fs-title-s fw-Semibold">
+                        <div class="download-url">iThink</div>
+                    </a>
+                    <a href="https://space.bilibili.com/699064030" class="fs-title-s fw-Semibold">
+                        <div class="download-url">飘特</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="cookie.js"></script>
+    <script type="text/javascript" src="bgstyle.js"></script>
+</body>
+
+</html>

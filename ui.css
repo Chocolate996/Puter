@@ -148,13 +148,13 @@
 @keyframes message {
     0% {
         transform: translateY(-50px);
-        opacity: 0.25;
+        opacity: 0;
         width: 20px;
     }
 
     10% {
         transform: translateY(0px);
-        width: 200px;
+        width: 300px;
         opacity: 1;
         padding: 5px 10px;
     }
@@ -174,7 +174,7 @@
     80% {}
 
     90% {
-        width: 200px;
+        width: 300px;
         opacity: 1;
         padding: 5px 10px;
         transform: translateY(0px);
