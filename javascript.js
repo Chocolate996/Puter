@@ -21,7 +21,7 @@ document.querySelectorAll('mark').forEach(mark => {
 })
 
 
-//music长宽
+//music长宽s
 var get_h = document.querySelector('.download-margin');
 var out_w = (getComputedStyle(get_h).height);
 
