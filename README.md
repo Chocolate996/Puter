@@ -1,15 +1,23 @@
 # Puter
-backups
-
+Website backup
 
 Uh-huh..
+## About the webside and me.
+* ### This is the source code of my website.
 
-This is the source code of our website. You can do anything with it, but please indicate the source of the code.
+You can do anything with it, but please indicate the source of the code.
 
-We used some code from CodingStartup, you can follow him on bilibili!
+* ### Doing this website is just for me to exercise my ability.
 
-https://space.bilibili.com/451368848
+I'm really bored.
+## Other things... 
+
+I used some code from [CodingStartup][1], you can follow him on bilibili!
 
 I just learned html, so the code may not be very good.
 
 Github is so complicated,who can hlep me?
+
+All the words in this readme file are translated from Chinese. You should have found it, right?
+
+[1]:https://space.bilibili.com/451368848
