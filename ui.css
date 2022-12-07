@@ -1,5 +1,5 @@
 .img {
-    filter: blur(3px);
+    filter: blur(0px);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -223,11 +223,11 @@
     }
 }
 
-.bluebox:hover, .more:hover, .download-url:hover, .download-url-out:hover, .download-box:hover, .message-a:hover {
+.bluebox:hover, .more:hover, .download-url:hover, .download-url-out:hover, .download-box:hover, .message-a:hover, .bluebox-code-outside:hover {
     transform: scale(105%);
 }
 
-.bluebox:active, .more:active, .download-url:active, .download-url-out:active {
+.bluebox:active, .more:active, .download-url:active, .download-url-out:active, .bluebox-code-outside:active {
     transform: scale(95%);
     filter: blur(2px);
     opacity: 75%;
@@ -247,7 +247,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 400;
+    font-weight: var(--fw-Semibold);
     transition: all 0.5s var(--default-bezier-end);
 }
 
@@ -261,6 +261,55 @@
     background-color: var(--default-color-focus);
     box-shadow: 0 0 5px var(--default-color-shadow);
     transition: all 0.3s var(--default-bezier-start);
+}
+
+.bluebox-code-outside {
+    width: var(--bluebox-code-outside-w);
+    position: relative;
+    overflow: hidden;
+    background-color: var(--default-color);
+    border-radius: 5px;
+    color: var(--text-white);
+    min-width: 20px;
+    padding: 2px 5px;
+    display: flex;
+    align-items: flex-start;
+    transition: all 0.5s var(--default-bezier-end);
+}
+
+.bluebox-code-outside:hover {
+    background-color: var(--default-color-focus);
+    box-shadow: 0 0 5px var(--default-color-shadow);
+    transition: all 0.4s var(--default-bezier-start);
+}
+
+.bluebox-code-outside:active {
+    background-color: var(--default-color-focus);
+    box-shadow: 0 0 5px var(--default-color-shadow);
+    transition: all 0.3s var(--default-bezier-start);
+}
+
+
+.bluebox-code-outside:hover {
+    width: var(--bluebox-code-outside-w-hover);
+}
+
+.bluebox-code-outside:hover>.bluebox-code {
+    transform: translateX(var(--bluebox-code-left-hover));
+    transition: all 0.4s var(--default-bezier-start);
+}
+
+.bluebox-code {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(0px);
+    transition: all 0.5s var(--default-bezier-end);
+}
+
+.bluebox-code-content {
+    white-space: nowrap;
+    font-weight: var(--fw-Semibold);
 }
 
 .bluebox-no {

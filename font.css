@@ -40,6 +40,14 @@
     font-weight: 900;
 }
 
+:root {
+    --fw-Ultralight: 100;
+    --fw-Light: 300;
+    --fw-Regular: 400;
+    --fw-Semibold: 600;
+    --fw-Bold: 900;
+}
+
 .fs-w {
     justify-self: flex-start;
     color: var(--text-white);
