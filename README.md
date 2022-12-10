@@ -1,7 +1,7 @@
 # Puter
 Website backup
 
-Uh-huh..
+Pages:[https://chocolate996.github.io/Puter/][2]
 ## About the webside and me.
 * ### This is the source code of my website.
 
@@ -21,3 +21,4 @@ Github is so complicated,who can hlep me?
 All the words in this readme file are translated from Chinese. You should have found it, right?
 
 [1]:https://space.bilibili.com/451368848
+[2]
