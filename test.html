@@ -73,7 +73,15 @@
             box-shadow: var(--shadow-3) 0px 0px 10px;
         }
 
+        .imgbox:hover>.imgbox-content {
+            opacity: 1;
+            margin-bottom: 0px;
+            filter: blur(0px);
+            transition: 0.6s var(--default-bezier-ios-start);
+        }
+
         .imgbox-content {
+            margin-bottom: -20px;
             width: 200px;
             height: 20px;
             border-radius: 10px;
@@ -85,6 +93,8 @@
             flex-direction: column;
             transform: scale(75%);
             overflow: hidden;
+            filter: blur(10px);
+            opacity: 0;
             transition: 0.8s var(--default-bezier-ios-end);
         }
 
@@ -95,16 +105,16 @@
             transition: 1s var(--default-bezier-ios-start);
         }
 
+        .imgbox-content:hover>.imgbox-text {
+            filter: blur(0px);
+            opacity: 1;
+        }
+
         .imgbox-text {
             margin: 5px 10px;
             opacity: 0;
             filter: blur(5px);
-            transition: all 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
-        }
-
-        .imgbox-text:hover {
-            filter: blur(0px);
-            opacity: 1;
+            transition: 0.3s cubic-bezier(0.28, 0.11, 0.32, 1);
         }
 
         .box-bg {
@@ -122,12 +132,19 @@
             padding: 5px 10px;
             border-radius: 100px;
         }
+
+        .a {
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
 <body>
     <p class="1234">TEST</p>
     <div class="flex">
+        <span>更改背景图片</span>
         <div class="box-bg">
             <a href="">
                 <div onclick="setBg1()" class="box-bg-content">女孩</div>
@@ -145,15 +162,6 @@
                 <div onclick="setBg5()" class="box-bg-content">动物</div>
             </a>
         </div>
-        <div class="box">
-            <span class="text">JUST&nbsp;A "TEST"</span>
-        </div>
-        <div class="box">
-            <span><mark>JUST&nbsp;A "TEST"</mark></span>
-        </div>
-        <div class="box">
-            <span>JUST&nbsp;A "TEST"</span>
-        </div>
         <div class="imgbox" id="bg_img">
             <div class="imgbox-content">
                 <div class="imgbox-text">
@@ -162,17 +170,41 @@
                 </div>
             </div>
         </div>
-        <a onclick="setCookie()" href="">
-            <div class="box">
-                <span>主页壁纸<br>Unsplash</span>
+        <div class="a">
+            <div class="imgbox" style="background-image: url(https://source.unsplash.com/2560x1440/?encryption,car);">
+                <div class="imgbox-content">
+                    <div class="imgbox-text">
+                        <h1>The Box</h1>
+                        <p>The "div" HTML element is the generic container for flow content.</p>
+                    </div>
+                </div>
             </div>
-        </a>
-        <a onclick="delCookie()" href="">
-            <div class="box">
-                <span>主页壁纸<br>Bing</span>
+            <div class="imgbox" style="background-image: url(https://source.unsplash.com/2560x1440/?encryption,sport);">
+                <div class="imgbox-content">
+                    <div class="imgbox-text">
+                        <h1>The Box</h1>
+                        <p>The "div" HTML element is the generic container for flow content.</p>
+                    </div>
+                </div>
             </div>
-        </a>
-        <div class="download-url">按钮</div>
+            <div class="imgbox"
+                style="background-image: url(https://source.unsplash.com/2560x1440/?encryption,animal);">
+                <div class="imgbox-content">
+                    <div class="imgbox-text">
+                        <h1>The Box</h1>
+                        <p>The "div" HTML element is the generic container for flow content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="imgbox" style="background-image: url(https://source.unsplash.com/2560x1440/?encryption,china);">
+                <div class="imgbox-content">
+                    <div class="imgbox-text">
+                        <h1>The Box</h1>
+                        <p>The "div" HTML element is the generic container for flow content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>

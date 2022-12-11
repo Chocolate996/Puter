@@ -327,8 +327,8 @@
 }
 
 .whitebox {
-    -webkit-backdrop-filter: blur(20px)saturate(180%);
-    backdrop-filter: blur(20px)saturate(180%);
+    -webkit-backdrop-filter: blur(40px)saturate(180%);
+    backdrop-filter: blur(40px)saturate(180%);
     background-color: var(--box-white-4);
     box-shadow: 0px 5px 20px var(--shadow-3);
     max-width: 641.31px;
@@ -444,7 +444,7 @@
 .download-url:hover {
     background-color: var(--box-white-4);
     box-shadow: 0px 5px 10px var(--shadow-1);
-    transition: 0.5s var(--default-bezier-start);
+    transition: 0.4s var(--default-bezier-start);
 }
 
 .download-url:active {

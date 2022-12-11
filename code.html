@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="font.css">
     <style>
         .nav {
+            -webkit-backdrop-filter: blur(0px)saturate(1);
+            backdrop-filter: blur(0px)saturate(1);
             background-color: rgba(255, 255, 255, 0.15);
         }
 
@@ -17,6 +19,8 @@
         }
 
         .whitebox {
+            -webkit-backdrop-filter: blur(0px)saturate(1);
+            backdrop-filter: blur(0px)saturate(1);
             width: 40%;
             background-color: rgba(255, 255, 255, 0.05);
         }
@@ -27,39 +31,11 @@
 
         .download-url {
             background-color: rgba(255, 255, 255, 0);
-            -webkit-backdrop-filter: saturate(200%);
-            backdrop-filter: saturate(200%);
         }
 
         .download-url:hover {
             background-color: rgba(255, 255, 255, 0.05);
         }
-
-        .code-bg {
-            animation-name: bg;
-            animation-duration: 20s;
-            animation-iteration-count: infinite;
-            animation-timing-function: var(--default-bezier-color);
-        }
-
-        @keyframes bg {
-            0% {
-                background-color: rgb(29, 88, 155);
-            }
-
-            25% {
-                background-color: rgb(45, 98, 158);
-            }
-
-            50% {
-                background-color: rgb(9, 41, 78);
-            }
-
-            100% {
-                background-color: rgb(29, 88, 155);
-            }
-        }
-
 
         body {
             margin: 0;
@@ -386,14 +362,11 @@
                     <a href="about.html" class="fs-title-s fw-Semibold">
                         <div class="download-url">关于我们</div>
                     </a>
-                    <a href="index.html" class="fs-title-s fw-Semibold">
-                        <div class="download-url">回到主页</div>
-                    </a>
                     <a href="test.html" class="fs-title-s fw-Semibold">
                         <div class="download-url">测试项目</div>
                     </a>
                     <a href="bgstyle.html" class="fs-title-s fw-Semibold">
-                        <div class="download-url">更改主页背景</div>
+                        <div class="download-url">更改背景图片</div>
                     </a>
                 </div>
             </div>
