@@ -16,9 +16,5 @@ I used some code from [CodingStartup][1], you can follow him on bilibili!
 
 I just learned html, so the code may not be very good.
 
-Github is so complicated,who can hlep me?
-
-All the words in this readme file are translated from Chinese. You should have found it, right?
-
 [1]:https://space.bilibili.com/451368848
 [2]:https://chocolate996.github.io/Puter/
