@@ -19,6 +19,9 @@ document.querySelectorAll("mark").forEach((mark) => {
   observer.observe(mark);
 });
 
+//homo
+console.log("既然都看到这了，你有什么意见吗？");
+
 //music长宽
 var get_h = document.querySelector(".download-margin");
 var out_w = getComputedStyle(get_h).height;
@@ -53,12 +56,12 @@ var get_bluebox_content_h_2 = parseFloat(
 );
 
 var out_bluebox_code_w =
-  get_bluebox_content_w_1 + get_bluebox_content_w_2 + parseFloat("5") + "px";
+  get_bluebox_content_w_1 + get_bluebox_content_w_2 + parseFloat("6") + "px";
 var out_bluebox_code_outside_w = get_bluebox_content_w_1 + "px";
 var out_bluebox_code_outside_w_hover = get_bluebox_content_w_2 + "px";
 var out_bluebox_code_outside_h = get_bluebox_content_h_1 + "px";
 var out_bluebox_code_outside_h = get_bluebox_content_h_1 + "px";
-var out_bluebox_code_left = -(get_bluebox_content_w_1 + parseFloat("5")) + "px";
+var out_bluebox_code_left = -(get_bluebox_content_w_1 + parseFloat("6")) + "px";
 document.documentElement.style.setProperty(
   "--bluebox-code-outside-w",
   out_bluebox_code_outside_w

@@ -254,13 +254,13 @@
 .bluebox:hover {
     background-color: var(--default-color-focus);
     box-shadow: 0 0 5px var(--default-color-shadow);
-    transition: all 0.4s var(--default-bezier-start);
+    transition: all 0.3s var(--default-bezier-start);
 }
 
 .bluebox:active {
     background-color: var(--default-color-focus);
     box-shadow: 0 0 5px var(--default-color-shadow);
-    transition: all 0.3s var(--default-bezier-start);
+    transition: all 0.2s var(--default-bezier-start);
 }
 
 .bluebox-code-outside {
@@ -280,13 +280,13 @@
 .bluebox-code-outside:hover {
     background-color: var(--default-color-focus);
     box-shadow: 0 0 5px var(--default-color-shadow);
-    transition: all 0.4s var(--default-bezier-start);
+    transition: all 0.3s var(--default-bezier-start);
 }
 
 .bluebox-code-outside:active {
     background-color: var(--default-color-focus);
     box-shadow: 0 0 5px var(--default-color-shadow);
-    transition: all 0.3s var(--default-bezier-start);
+    transition: all 0.2s var(--default-bezier-start);
 }
 
 
@@ -301,6 +301,7 @@
 
 .bluebox-code {
     position: absolute;
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     transform: translateX(0px);
@@ -327,8 +328,8 @@
 }
 
 .whitebox {
-    -webkit-backdrop-filter: blur(40px)saturate(180%);
-    backdrop-filter: blur(40px)saturate(180%);
+    -webkit-backdrop-filter: blur(40px)saturate(120%);
+    backdrop-filter: blur(40px)saturate(120%);
     background-color: var(--box-white-4);
     box-shadow: 0px 5px 20px var(--shadow-3);
     max-width: 641.31px;
@@ -353,8 +354,8 @@
 }
 
 .more {
-    -webkit-backdrop-filter: blur(20px)saturate(180%);
-    backdrop-filter: blur(20px)saturate(180%);
+    -webkit-backdrop-filter: blur(20px)saturate(120%);
+    backdrop-filter: blur(20px)saturate(120%);
     border-radius: 100%;
     margin-top: 25px;
     background-color: var(--box-white-4);
@@ -388,8 +389,8 @@
 }
 
 .download-url-box-out {
-    -webkit-backdrop-filter: blur(20px)saturate(180%);
-    backdrop-filter: blur(20px)saturate(180%);
+    -webkit-backdrop-filter: blur(20px)saturate(120%);
+    backdrop-filter: blur(20px)saturate(120%);
     background-color: var(--box-white-4);
     box-shadow: 0px 5px 15px var(--shadow-3);
     border-radius: 100px;
@@ -421,13 +422,13 @@
 .download-url-out:hover {
     background-color: var(--box-white-3);
     box-shadow: 0px 5px 5px var(--shadow-1);
-    transition: 0.5s var(--default-bezier-start);
+    transition: 0.3s var(--default-bezier-start);
 }
 
 .download-url-out:active {
     background-color: var(--box-white-5);
     box-shadow: 0px 5px 5px var(--shadow-1);
-    transition: 0.3s var(--default-bezier-start);
+    transition: 0.2s var(--default-bezier-start);
 }
 
 .download-url {
@@ -496,6 +497,7 @@
 }
 
 .download-img-color {
+    box-sizing: border-box;
     border-radius: 15px;
     border: 0px solid var(--default-color);
     background: var(--default-color);
@@ -505,7 +507,6 @@
 }
 
 .download-img-color:hover {
-    box-sizing: border-box;
     border: 5px solid var(--default-color);
     background-color: var(--default-color-opacity);
 }
