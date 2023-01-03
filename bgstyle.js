@@ -79,8 +79,12 @@ if (get == "Unsplash") {
     "url(https://source.unsplash.com/2560x1440/?encryption,animal)";
   var nowbg = "specificUnsplash";
 } else {
-  console.log("Bing");
-  var nowbg = "Bing";
+//   console.log("Bing");
+//   var nowbg = "Bing";
+    var bgStyle = document.getElementById("bg_img");
+  bgStyle.style.backgroundImage =
+    "url(https://source.unsplash.com/2560x1440/?encryption,birthday)";
+  var nowbg = "specificUnsplash";
 }
 
 if (nowbg == "Unsplash") {
